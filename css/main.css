@@ -15,7 +15,7 @@ body {
     background: #ff3366;
     color: #ffffff;
 }
-
+.clrwhite{color:#fff;}
 img::selection {
     background: 0 0;
 }
@@ -180,6 +180,85 @@ section h4.section-subheading {
     font-weight: 300;
 }
 
+/* notes navigation list */
+.nts-list{
+text-align: left;
+}
+.nts-list ul{list-style: none;padding:0px;}
+.nts-list ul li{text-align:left;}
+.nts-list ul li a{display:block;}
+.nts-list ul li a:hover{text-decoration: none;}
+.topsublist{display: inline-block;padding:0px;}
+.topsublist>li{position: relative;border:1px solid #ff3366;width:200px;border-bottom: none;}
+.topsublist>li:last-child{border-bottom:1px solid #ff3366;}
+
+.topsublist>li>a{padding:6px 14px;display:block;}
+.topsublist>li>ul{display:none;background:#fff;position: absolute;left:100%;top:-1px;min-width:200px;z-index: 2;}
+.topsublist>li:hover{background:#ff3366;color:#fff;}
+.topsublist>li:hover:before{width: 0;
+    height: 0;
+    border-right: 10px solid #fff;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    position: absolute;
+    right: 0px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    content: "";
+}
+.topsublist>li:hover>a{color:#fff;}
+.topsublist>li:hover>ul{display:block;}
+.topsublist>li>ul>li{border:1px solid #ff3366;border-bottom:none;position: relative;}
+.topsublist>li>ul>li:hover:before{width: 0;
+    height: 0;
+    border-right: 10px solid #fff;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    position: absolute;
+    right: 0px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    content: "";
+}
+.topsublist>li>ul>li:last-child{border-bottom:1px solid #ff3366;}
+.topsublist>li>ul>li>a{display: block;padding:6px 14px;background: transparent;}
+.topsublist>li>ul>li>a:hover{background: #ff3366;color:#fff;}
+.topsublist>li>ul>li>ul{display:none;position: absolute;left:100%;top:-1px;background: #fff;z-index: 3;min-width:200px;}
+.topsublist>li>ul>li:hover>ul{display: block;}
+.topsublist>li>ul>li>ul>li{border:1px solid #ff3366;border-bottom:none;}
+.topsublist>li>ul>li>ul>li:last-child{border-bottom:1px solid #ff3366;}
+.topsublist>li>ul>li>ul>li>a{display:block;padding:6px 14px;}
+
+.topsublist>li>ul>li>div{display: none;position: absolute;left:100%;top:-1px;border:1px solid #ff3366;border-bottom:none;background: #fff;min-width:200px;z-index: 3;z-index:4;}
+.topsublist>li>ul>li:hover>div{display: block;}
+.topsublist>li>ul>li>div h4{color:#000;font-size:15px;font-weight:700;margin:0px;border-bottom:1px solid #eeeeee;padding:6px 14px;}
+.topsublist>li>ul>li>div>ul{}
+.topsublist>li>ul>li>div>ul>li{padding:6px 14px;border:1px solid #ff3366;border-bottom:none;border-left:none;border-right:none;}
+.topsublist>li>ul>li>div>ul>li:last-child{border-bottom:1px solid #ff3366;}
+
+
+
+.lat-box{border:1px solid #4d4d4d;}
+
+.fntsize{font-size:40px;position: relative;display: inline-block;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
+.fntsize:before{content:"\f10d";font-family: fontawesome;font-size:22px;position: absolute;top:-10px;left:-30px;}
+.fntsize:after{content:"\f10e";font-family: fontawesome;font-size:22px;position: absolute;top:-10px;right:-20px;}
+
+.fntsize span{position: absolute;right:-30px;bottom:-40px;font-size:20px;}
+.nts-list.nts-list2{display: inline-block;margin:0 auto;}
+
+
+.topsublist.topsublist2>li>ul>li:hover>ul{right:unset;left:-100%;}
+
+
+
+
+
+
+
+
 @media(min-width:768px) {
     section {
         padding: 120px 0;
@@ -268,12 +347,22 @@ section h4.section-subheading {
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 1px;
-    color: #4d4d4d;
+    color: #fff;
 }
 .navbar-default .nav li a:hover,
 .navbar-default .nav li a:focus {
     outline: 0;
-    color: #ff3366;
+    color: #fff;
+    background: #ff3366;
+}
+.navbar-default.navbar-shrink .nav li a{
+    color:#777;
+}
+.navbar-shrink.navbar-default .nav>.active>a{
+    color:#fff;
+} 
+.navbar-default.navbar-shrink .nav li a:hover{
+    color:#fff;
 }
 .navbar-default .navbar-nav>.active>a {
     border-radius: 0;
@@ -322,7 +411,7 @@ section h4.section-subheading {
 header {
     color: #4d4d4d;
     background-attachment: scroll;
-    background-image: url(../../img/header-bg-1.jpg);
+    background-image: url(../img/header-bg-1.jpg);
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
